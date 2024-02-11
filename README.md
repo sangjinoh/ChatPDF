@@ -1,1 +1,16 @@
-LangChin을 공부합시다.
+# LangChin을 공부합시다.
+
+## LangChin의 구조
+- LLM: 초거대 언어모델로, 생성 모델의 엔진과 같은 역할을 하는 핵심 구성 요소
+    예시: GPT-3.5, PALM-2, LLAMA2, StableVicuna, WizardLM, MPT, ...
+- Prompt: 초거대 언어모델에게 지시하는 명령문
+    요소: Prompt Templates, Chat Prompt Template, Example Selectors, Output Parsers
+- Index: LLM이 문서를 쉽게 탐색할 수 있도록 구조화 하는 모듈
+    예시: Document Loaders, Text Splitters, VectorDB, Retrievals, ...
+- Memory: 채팅 이력을 기억하도록 하여, 이를 기반으로 대화가 가능하도록 하는 모듈
+    예시: ConversationBufferMemory, Entity Memory, Conversation Knowledge Graph Memory, ...
+- Chain: LLM 사슬을 형성하여, 연속적인 LLM 호출이 가능하도록 하는 핵심 구성 요소
+    예시: LLM Chain, Question Answering, Summarization, Retrieval Question/Answering, ...
+- Agents: LLM이 기존 Prompt Template으로 수행할 수 없는 작업을 가능케하는 모듈
+    예시: Custom Agent, Custom MultiAction Agent, Conversation Agent, ...
+
