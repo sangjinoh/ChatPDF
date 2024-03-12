@@ -24,7 +24,7 @@ ko = HuggingFaceEmbeddings(
 
 
 from langchain.document_loaders import PyPDFLoader, DirectoryLoader
-loader=DirectoryLoader('assets/doc/secretgarden_script',
+loader=DirectoryLoader('../assets/doc/secretgarden_script',
                        glob="*.pdf",
                        loader_cls=PyPDFLoader)
 
@@ -41,8 +41,8 @@ print('[+] Split Done!!')
 from langchain.vectorstores import Chroma
 
 # save to disk
-saved_db = Chroma.from_documents(docs, ko, persist_directory='chroma_db')
-loaded_db = Chroma(persist_directory="chroma_db", embedding_function=ko)
+saved_db = Chroma.from_documents(docs, ko, persist_directory='../chroma_db')
+loaded_db = Chroma(persist_directory="../chroma_db", embedding_function=ko)
 
 print('[+] Embedding done!!')
 
@@ -50,7 +50,7 @@ print('[+] Embedding done!!')
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.llms import LlamaCpp
 
-model_path = "assets/models/llama-2-7b-chat.Q4_K_M.gguf"
+model_path = "../assets/models/llama-2-7b-chat.Q4_K_M.gguf"
 
 llama = LlamaCpp(
     model_path=model_path,

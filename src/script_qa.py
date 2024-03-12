@@ -19,7 +19,7 @@ ko = HuggingFaceEmbeddings(
 
 loaded_db = Chroma(persist_directory="chroma_db", embedding_function=ko)
 
-model_path = "assets/models/llama-2-7b-chat.Q4_K_M.gguf"
+model_path = "../assets/models/llama-2-7b-chat.Q4_K_M.gguf"
 
 llama = LlamaCpp(
     model_path=model_path,
